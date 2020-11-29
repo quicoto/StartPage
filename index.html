@@ -93,7 +93,7 @@
 
   <script>
     (() => {
-      const _$ = {}
+      const _$ = {};
 
       function _setElements() {
         _$.time = document.getElementById('time');
@@ -102,8 +102,8 @@
 
       function _setTime() {
         const now = new Date();
-        const hours = `${now.getHours()}`.padStart(2, '0')
-        const minutes = `${now.getMinutes()}`.padStart(2, '0')
+        const hours = `${now.getHours()}`.padStart(2, '0');
+        const minutes = `${now.getMinutes()}`.padStart(2, '0');
 
         _$.time.innerHTML = `${hours}<span class="time-separator">:</span>${minutes}`;
       }
