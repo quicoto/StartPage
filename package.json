@@ -1,0 +1,21 @@
+{
+  "name": "startpage",
+  "version": "1.0.0",
+  "description": "My Firefox Start Page",
+  "scripts": {
+    "develop": "browser-sync start --server --files '*.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quicoto/StartPage.git"
+  },
+  "author": "Ricard Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quicoto/StartPage/issues"
+  },
+  "homepage": "https://github.com/quicoto/StartPage#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.13"
+  }
+}
