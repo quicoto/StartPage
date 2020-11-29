@@ -31,7 +31,13 @@
     main {
       max-width: 700px;
       margin: 0 auto;
+      padding-top: 1rem;
       width: 100%;
+    }
+
+    #date {
+      font-size: 0.6rem;
+      margin-bottom: 1rem;
     }
 
     #time {
@@ -78,17 +84,38 @@
       outline-offset: 2px;
       border-color: rgba(163,230,53);
     }
+
+    footer {
+      font-size: 0.4rem;
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+    }
+
+    a {
+      color: #d8dee9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgba(163,230,53);
+    }
   </style>
 </head>
 
 <body>
   <main>
+    <div id="date"></div>
     <div id="time"></div>
     <h1 class="greeting"><span id="greeting"></span>, Ricard</h1>
 
     <form action="https://duckduckgo.com/" method="get">
       <input class="search_input" type="text" name="q" placeholder="Search..." autofocus>
     </form>
+
+    <footer>
+      <a href="https://github.com/quicoto/StartPage">1.1.0</a>
+    </footer>
   </main>
 
   <script>
@@ -96,15 +123,37 @@
       const _$ = {};
 
       function _setElements() {
+        _$.date = document.getElementById('date');
         _$.time = document.getElementById('time');
         _$.greeting = document.getElementById('greeting');
       }
 
-      function _setTime() {
+      function addOrdinalSuffix(i) {
+          const j = i % 10,
+              k = i % 100;
+          if (j == 1 && k != 11) {
+              return i + "st";
+          }
+          if (j == 2 && k != 12) {
+              return i + "nd";
+          }
+          if (j == 3 && k != 13) {
+              return i + "rd";
+          }
+          return i + "th";
+      }
+
+      function _setTimeAndDate() {
         const now = new Date();
         const hours = `${now.getHours()}`.padStart(2, '0');
         const minutes = `${now.getMinutes()}`.padStart(2, '0');
+        const dayOfTheWeek = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(now);
+        const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(now);
+        const day = new Intl.DateTimeFormat('en-US', { day: 'numeric' }).format(now);
+        const year = new Intl.DateTimeFormat('en-US', { year: 'numeric' }).format(now);
 
+
+        _$.date.innerHTML = `${dayOfTheWeek}, ${month} ${addOrdinalSuffix(+day)} ${year}`;
         _$.time.innerHTML = `${hours}<span class="time-separator">:</span>${minutes}`;
       }
 
@@ -113,7 +162,7 @@
         const now = new Date();
         const hour = now.getHours();
 
-        if (hour > 0) greeting = "Go to sleep";
+        if (hour >= 0) greeting = "Go to sleep";
         if (hour > 4) greeting = "It's too early";
         if (hour > 8) greeting = 'Good morning';
         if (hour > 12) greeting = 'Good afternoon';
@@ -125,9 +174,9 @@
 
       function _init() {
         _setElements();
-        _setTime();
+        _setTimeAndDate();
         _setGreeting();
-        window.setInterval(_setTime, 500);
+        window.setInterval(_setTimeAndDate, 500);
       }
 
       _init();
