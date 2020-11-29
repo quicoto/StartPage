@@ -1,6 +1,6 @@
 # StartPage
 
-My Firefox Start Page
+My Start Page
 
 - Time
 - Custom greetings

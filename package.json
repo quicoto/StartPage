@@ -1,7 +1,7 @@
 {
   "name": "startpage",
   "version": "1.0.0",
-  "description": "My Firefox Start Page",
+  "description": "My Start Page",
   "scripts": {
     "develop": "browser-sync start --server --files '*.html'"
   },
