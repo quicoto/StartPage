@@ -114,7 +114,7 @@
     </form>
 
     <footer>
-      <a href="https://github.com/quicoto/StartPage">1.1.0</a>
+      <a href="https://github.com/quicoto/StartPage">1.1.1</a>
     </footer>
   </main>
 
@@ -163,11 +163,11 @@
         const hour = now.getHours();
 
         if (hour >= 0) greeting = "Go to sleep";
-        if (hour > 4) greeting = "It's too early";
-        if (hour > 8) greeting = 'Good morning';
-        if (hour > 12) greeting = 'Good afternoon';
-        if (hour > 18) greeting = 'Good evening';
-        if (hour > 21) greeting = 'Good night';
+        if (hour >= 4) greeting = "It's too early";
+        if (hour >= 8) greeting = 'Good morning';
+        if (hour >= 12) greeting = 'Good afternoon';
+        if (hour >= 18) greeting = 'Good evening';
+        if (hour >= 21) greeting = 'Good night';
 
         _$.greeting.innerHTML = greeting;
       }
