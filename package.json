@@ -1,9 +1,11 @@
 {
   "name": "startpage",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "My Start Page",
   "scripts": {
-    "develop": "browser-sync start --server --files '*.html'"
+    "develop": "browser-sync start --server --files '*.html'",
+    "start:firefox": "web-ext run --source-dir ./",
+    "build:firefox": "web-ext build --source-dir ./"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,8 @@
   "homepage": "https://github.com/quicoto/StartPage#readme",
   "dependencies": {
     "browser-sync": "^2.26.13"
+  },
+  "devDependencies": {
+    "web-ext": "^5.4.1"
   }
 }

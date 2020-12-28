@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Rick's Start Page",
+  "short_name": "Rick's Start Page",
+  "version": "2.0.0",
+  "description": "My Start Page",
+  "applications": {
+    "gecko": {
+      "id": "extension@ricard.blog",
+      "strict_min_version": "54.0"
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "icons": {
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "96": "icons/96.png",
+    "128": "icons/128.png"
+  },
+  "permissions": ["storage"]
+}

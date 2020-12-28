@@ -8,15 +8,9 @@ My Start Page
 
 ![Screenshot](https://cldup.com/L_QEwROubQ.png)
 
-## Changelog
+## How to install?
 
-### 1.1.0
-
-Fix times.
-### 1.1.0
-
-Add date.
-
-### 1.0.0
-
-Ready with time, greeting and search.
+- You need Firefox Developer Edition
+- Go to `about:config`
+- Set `xpinstall.signatures.required` to `false`
+- Use `npm run build:firefox` to generate the ZIP file which can be dragged into the Addons page.
