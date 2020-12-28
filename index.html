@@ -29,10 +29,16 @@
     }
 
     main {
-      max-width: 700px;
+      max-width: 1400px;
       margin: 0 auto;
       padding-top: 1rem;
       width: 100%;
+    }
+
+    .content {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
     }
 
     #date {
@@ -53,36 +59,20 @@
       font-size: 1rem;
     }
 
+    h1, h2, h3 {
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+    }
+
     h1 {
       margin-top: 1rem;
-      margin-bottom: 2rem;
-      font-weight: 400;
     }
 
-    .search_input {
-      appearance: none;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      background-color: #1e1f21;
-      border-bottom: 1px solid white;
-      border-color: #d8dee9;
-      border-radius: 0;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      border-width: 1px;
-      box-shadow: none;
-      color: #d8dee9;
-      font-size: 0.5rem;
-      line-height: 1.25rem;
-      padding: 0;
-      width: 100%;
-    }
-
-    .search_input:focus {
-      outline: none;
-      outline-offset: 2px;
-      border-color: rgba(163,230,53);
+    #todo-list {
+      font-size: 0.6rem;
+      line-height: 1rem;
+      text-align: left;
     }
 
     footer {
@@ -105,15 +95,25 @@
 
 <body>
   <main>
-    <div id="date"></div>
-    <div id="time"></div>
-    <h1 class="greeting"><span id="greeting"></span>, Ricard</h1>
+    <section class="content">
+      <div class="column">
+        <div id="date"></div>
+        <div id="time"></div>
+        <h1 class="greeting"><span id="greeting"></span>, Ricard</h1>
+      </div>
+
+      <div class="column">
+        <h3>Todo</h3>
+        <div id="todo-list"></div>
+      </div>
+    </section>
 
     <footer>
-      <a href="https://github.com/quicoto/StartPage">2.0.0</a>
+      <a href="https://github.com/quicoto/StartPage">3.0.0</a>
     </footer>
   </main>
 
   <script src="main.js"></script>
+  <script src="https://ricard.dev/todo/index.php?rest_route=/wp/v2/posts&_fields[]=done&_fields[]=clean-title&per_page=20&_jsonp=renderTodos"></script>
 </body>
 </html>

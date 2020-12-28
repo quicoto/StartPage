@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Rick's Start Page",
   "short_name": "Rick's Start Page",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "My Start Page",
   "applications": {
     "gecko": {
@@ -19,5 +19,6 @@
     "96": "icons/96.png",
     "128": "icons/128.png"
   },
-  "permissions": ["storage"]
+  "permissions": ["storage"],
+  "content_security_policy": "script-src 'self' https://ricard.dev; object-src 'self'"
 }

@@ -3,9 +3,10 @@
 My Start Page
 
 - Time and date.
-- Custom greetings
+- Custom greetings.
+- Fetch my To-Do lists using the WordPress REST API.
 
-![Screenshot](https://cldup.com/L_QEwROubQ.png)
+![Screenshot](https://cldup.com/k1hor7Hh5q.png)
 
 ## How to install?
 
