@@ -4,7 +4,6 @@ My Start Page
 
 - Time and date.
 - Custom greetings
-- Search with DuckDuckGo
 
 ![Screenshot](https://cldup.com/L_QEwROubQ.png)
 
