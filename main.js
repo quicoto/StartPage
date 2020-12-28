@@ -42,27 +42,33 @@ function _setGreeting() {
   const now = new Date();
   const hour = now.getHours();
 
-  if (hour >= 0) greeting = "Go to sleep";
-  if (hour >= 4) greeting = "It's too early";
-  if (hour >= 8) greeting = 'Good morning';
-  if (hour >= 12) greeting = 'Good afternoon';
-  if (hour >= 18) greeting = 'Good evening';
-  if (hour >= 21) greeting = 'Good night';
+  if (hour >= 0) greeting = "😡 Go to sleep";
+  if (hour >= 4) greeting = "😪 It's too early";
+  if (hour >= 8) greeting = '🥱 Good morning';
+  if (hour >= 12) greeting = '🙂 Good afternoon';
+  if (hour >= 18) greeting = '😌 Good evening';
+  if (hour >= 21) greeting = '👋 Good night';
 
   _$.greeting.innerHTML = greeting;
 }
 
 function renderTodos(data) {
   if (_$.todoList) {
-    let list = '';
+    let output = '';
 
-    data.forEach((todo) => {
-      if (todo.done === false) {
-        list += `<li>${todo['clean-title']}</li>`;
-      }
-    });
+    if (data.length > 0) {
+      data.forEach((todo) => {
+        if (todo.done === false) {
+          output += `<li>${todo['clean-title']}</li>`;
+        }
+      });
 
-    _$.todoList.innerHTML = `<ul>${list}</ul>`;
+      output = `<ul>${output}</ul>`;
+    } else {
+      output = '<p>No items left, well done! 👏</p>';
+    }
+
+    _$.todoList.innerHTML = output;
   }
 }
 
