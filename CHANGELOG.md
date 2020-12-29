@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.1.1
+
+Fix typo.
+
+## 3.1.0
+
+Query 100 items from the API to be sure we get old to-do's as well.
+
 ## 3.1.0
 
 Add loading state for the API call and the "no items" message.
