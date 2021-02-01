@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/quicoto/StartPage#readme",
   "dependencies": {
-    "browser-sync": "^2.26.13"
+    "browser-sync": "^2.26.14"
   },
   "devDependencies": {
-    "web-ext": "^5.4.1"
+    "web-ext": "^5.5.0"
   }
 }
