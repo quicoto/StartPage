@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.4.0
+
+- I no longer use to-do.
+
 ## 3.3.0
 
 - Add placeholder text with blur.

@@ -5,7 +5,6 @@ function _setElements() {
   _$.date = document.getElementById('date');
   _$.time = document.getElementById('time');
   _$.greeting = document.getElementById('greeting');
-  _$.todoList = document.getElementById('todo-list');
 }
 
 function addOrdinalSuffix(i) {
@@ -45,31 +44,15 @@ function _setGreeting() {
   if (hour >= 0) greeting = "😡 Go to sleep";
   if (hour >= 4) greeting = "😪 It's too early";
   if (hour >= 8) greeting = '🥱 Good morning';
+  if (hour >= 10) greeting = "💪 Let's do this";
+  if (hour >= 11) greeting = '🍵 Tea time';
   if (hour >= 12) greeting = '🙂 Good afternoon';
+  if (hour >= 17) greeting = "🏃‍♂️ You're done! good job";
   if (hour >= 18) greeting = '😌 Good evening';
   if (hour >= 21) greeting = '👋 Good night';
+  if (hour >= 23) greeting = '🚨 Time to sleep';
 
   _$.greeting.innerHTML = greeting;
-}
-
-function renderTodos(data) {
-  if (_$.todoList) {
-    let output = '';
-
-    if (data.length > 0) {
-      data.forEach((todo) => {
-        if (todo.done === false) {
-          output += `<li>${todo['clean-title']}</li>`;
-        }
-      });
-
-      output = `<ul>${output}</ul>`;
-    } else {
-      output = '<p>No items left, well done! 👏</p>';
-    }
-
-    _$.todoList.innerHTML = output;
-  }
 }
 
 function init() {

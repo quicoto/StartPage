@@ -1,6 +1,6 @@
 {
   "name": "startpage",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "My Start Page",
   "scripts": {
     "develop": "browser-sync start --server --files '*.html'",

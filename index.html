@@ -8,7 +8,7 @@
   <title>New Tab</title>
   <style>
     html {
-      font-size: 40px;
+      font-size: 60px;
       height: 80%;
     }
 
@@ -92,10 +92,6 @@
       color: rgba(163,230,53);
     }
 
-    .column {
-      width: 50%;
-    }
-
     .blur {
       filter: blur(10px);
     }
@@ -105,32 +101,18 @@
 <body>
   <main>
     <section class="content">
-      <div class="column">
+      <div>
         <div id="date"></div>
         <div id="time"></div>
         <h1 class="greeting"><span id="greeting"></span>, Ricard</h1>
       </div>
-
-      <div class="column">
-        <h3>To-Do</h3>
-        <div id="todo-list">
-         <ul class="blur">
-           <li>Placeholder text for the todo-items so it jumps less</li>
-           <li>Placeholder text for the todo-items so it jumps less</li>
-           <li>Placeholder text for the todo-items so it jumps less</li>
-           <li>Placeholder text for the todo-items so it jumps less</li>
-           <li>Placeholder text for the todo-items so it jumps less</li>
-         </ul>
-        </div>
-      </div>
     </section>
 
     <footer>
-      <a href="https://github.com/quicoto/StartPage">3.3.0</a>
+      <a href="https://github.com/quicoto/StartPage">3.4.0</a>
     </footer>
   </main>
 
   <script src="main.js"></script>
-  <script src="https://ricard.dev/todo/index.php?rest_route=/wp/v2/posts&_fields[]=done&_fields[]=clean-title&per_page=100&_jsonp=renderTodos"></script>
 </body>
 </html>
